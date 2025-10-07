@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>wortex213433</title>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -47,13 +47,15 @@
     .green { background: #28c840; }
 
     .content {
-      padding: 25px 30px;
+      padding: 30px 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     h1 {
       font-size: 2rem;
       text-align: center;
-      margin-bottom: 10px;
     }
 
     h1 span {
@@ -63,7 +65,7 @@
 
     p { color: #ccc; text-align: center; }
 
-    hr { border: none; border-top: 1px solid #222; margin: 30px 0; }
+    hr { border: none; border-top: 1px solid #222; margin: 20px 0; }
 
     ul { list-style: none; padding-left: 0; margin: 10px 0; }
     li { margin: 6px 0; font-size: 0.95rem; }
@@ -73,6 +75,9 @@
 
     .section { margin-bottom: 25px; }
 
+    /* extra spacing for readability */
+    .section + .section { margin-top: 25px; }
+
     .quote { text-align: center; font-style: italic; color: #888; margin-top: 20px; }
 
     /* Audio player style */
@@ -80,41 +85,47 @@
       background: rgba(255,255,255,0.05);
       border: 1px solid #333;
       border-radius: 10px;
-      padding: 12px 18px;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 20px auto 0 auto;
-      max-width: 320px;
+      margin: 30px auto 0 auto;
+      max-width: 360px;
       backdrop-filter: blur(10px);
+      gap: 10px;
     }
 
     audio {
-      width: 160px;
+      width: 180px;
       height: 28px;
       cursor: pointer;
       filter: invert(1);
+      border-radius: 6px;
     }
 
-    .track-title { font-size: 0.9rem; color: #bbb; margin-left: 10px; white-space: nowrap; }
+    .track-title { font-size: 0.95rem; color: #bbb; white-space: nowrap; }
 
     @media (max-width: 600px) {
-      .content { padding: 20px; }
+      .content { padding: 20px; gap: 20px; }
       h1 { font-size: 1.5rem; }
-      .music-window { flex-direction: column; gap: 10px; width: 90%; }
+      .music-window { flex-direction: column; width: 90%; gap: 10px; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
+
   <div class="window">
     <div class="window-header">
       <div class="button red"></div>
       <div class="button yellow"></div>
       <div class="button green"></div>
     </div>
+
     <div class="content">
-      <h1><span>wortex213433</span></h1>
-      <p>💻 Full-Stack Web Developer | CCNA Certified</p>
+      <div>
+        <h1><span>wortex213433</span></h1>
+        <p>💻 Full-Stack Web Developer | CCNA Certified</p>
+      </div>
 
       <hr>
 
@@ -154,8 +165,13 @@
           <li>⚛️ React</li>
           <li>🧠 Node.js</li>
           <li>🌐 Network Infrastructure</li>
-          <li>💻 Full-Stack Development</li>
+          <li>💻 Full-Stack Web Development</li>
         </ul>
+      </div>
+
+      <div class="section">
+        <h3>📧 Contact</h3>
+        <p><a href="mailto:environmentlocal.html@gmail.com">environmentlocal.html@gmail.com</a></p>
       </div>
 
       <div class="quote">⚡ "Code. Create. Connect." ⚡</div>
@@ -169,5 +185,6 @@
       </div>
     </div>
   </div>
+
 </body>
 </html>
